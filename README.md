@@ -8,4 +8,5 @@ pybooru: Can be installed with pip
 
 ## Future Plans
 Improved file name generation
+
 Precompiled binaries
