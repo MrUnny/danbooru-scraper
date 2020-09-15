@@ -50,10 +50,12 @@ def download():
         
     print("Now downloading the images. This may take a few minutes...")
     
+    filenumber = 0 #Now it doesn't do random numbers
     for post in posts: #Downloading the images AAAAAAAA THIS WAS PAINFUL
         try:
-            randnumber = randint(1, 9999999999) #Gets a random filename with random numbers, low chance of duplicate file names, but not zero
-            urllib.request.urlretrieve(post['file_url'], "images/{0}.jpg".format(randnumber)) #Downloads the image from the url, placing them in the images directory
+            filenumber = filenumber+1 #For any "file_url" posts, this makes it skip a number
+            print(filenumber)
+            urllib.request.urlretrieve(post['file_url'], "images/{0}.jpg".format(filenumber)) #Downloads the image from the url, placing them in the images directory
         except Exception as err: #Prints error to console and continues downloading
             print(err)
             continue
