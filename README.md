@@ -7,6 +7,5 @@ This does include my account and api key in the code, which I know is not a good
 pybooru: Can be installed with pip
 
 ## Future Plans
-Improved file name generation
 
 Precompiled binaries
